@@ -7,14 +7,48 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style type="text/css">
-          input {
-            border: 1px solid black;
-          }
-
+            body {
+              margin-top: 100px;
+              font-size: 18px;
+            }
+            .form-control {
+              font-size: 14px;
+            }
+            [data-secure-field] iframe {
+              border: 0 none transparent;
+              height: inherit;
+              vertical-align: middle;
+              width: inherit;
+              position: relative;
+              left: 1px;
+              top: -8px;
+            }
+            /* span[data-secure-field] {
+              background-color: #fff;
+              border: 1px solid #dfdfdf;
+              display: inline-block;
+              height: 27px;
+              padding: 1px;
+              position: relative;
+              width: 128px;
+            } */
+            form span {
+              display: inline-block;
+              height: 20px;
+              width: 200px;
+              margin-bottom: 15px;
+            }
+            span iframe {
+              height: 100%;
+              width: 100%;
+            }
+            .container {
+              width: 400px;
+            }
         </style>
     </head>
     <body>
-        <form name="contact" method="POST" data-netlify="true" secure='true' netlify>
+        <form name="contact" method="POST" netlify secure>
           <p>
             <label>Your Name: <input type="text" name="name" /></label>
           </p>
